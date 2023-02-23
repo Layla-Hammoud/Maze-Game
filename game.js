@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         boundaries[i].addEventListener("mouseover", function () {
             if (play_mode == true) {
                 status.innerHTML = "You lost!";
-                score = -10;
+                score -= 10;
                 for (var i = 0; i < boundaries.length; i++) {
                     boundaries[i].className = "boundary youlose";
                 }
-                mode = false;
+                play_mode = false;
                 document.querySelector(".score").innerHTML = `Your score is ${score}`;
             }
         })
