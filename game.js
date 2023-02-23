@@ -24,13 +24,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
         })
     }
-    end.addEventListener("mouseover" , function(){
-        if(play_mode==true){
+    end.addEventListener("mouseover", function () {
+        if (play_mode == true) {
             score += 5;
-            status.innerHTML="You won"
-            play_mode=false
+            status.innerHTML = "You won";
+            play_mode = false;
         }
     })
+    var view_socre = document.createElement("p");
+    view_socre.innerHTML=`Your score is ${score}`
+
 
 
 })
