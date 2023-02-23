@@ -15,15 +15,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].addEventListener("mouseover", function () {
             if (play_mode == true) {
-                status.innerHTML = "You lost";
+                status.innerHTML = "You lost!";
                 score = -10;
                 for (var i = 0; i < boundaries.length; i++) {
-                    boundaries[i].className = "boundary youlose"
+                    boundaries[i].className = "boundary youlose";
                 }
                 mode = false;
             }
         })
     }
+    end.addEventListener("mouseover" , function(){
+        if(play_mode==true){
+            score += 5;
+            status.innerHTML="You won"
+            play_mode=false
+        }
+    })
 
 
 })
