@@ -21,24 +21,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     boundaries[i].className = "boundary youlose";
                 }
                 mode = false;
-                document.querySelector(".score").innerHTML=`Your score is ${score}`;
+                document.querySelector(".score").innerHTML = `Your score is ${score}`;
             }
         })
     }
-    start.addEventListener("click", function(){
-        score=0;
-        document.querySelector(".score").innerHTML=`your score is ${score}`
+    start.addEventListener("click", function () {
+        score = 0;
+        document.querySelector(".score").innerHTML = `your score is ${score}`
     });
     end.addEventListener("mouseover", function () {
         if (play_mode == true) {
             score += 5;
             status.innerHTML = "You won";
             play_mode = false;
-            document.querySelector(".score").innerHTML=`Your score is ${score}`;
+            document.querySelector(".score").innerHTML = `Your score is ${score}`;
         }
     })
     var view_socre = document.createElement("p");
-    view_socre.innerHTML=`Your score is ${score}`;
-    view_socre.className="score";
+    view_socre.innerHTML = `Your score is ${score}`;
+    view_socre.className = "score";
     document.querySelector("h1").appendChild(view_socre);
 });
