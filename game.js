@@ -32,8 +32,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     })
     var view_socre = document.createElement("p");
-    view_socre.innerHTML=`Your score is ${score}`
-
-
+    view_socre.innerHTML=`Your score is ${score}`;
+    document.querySelector("h1").appendChild(view_socre);
 
 })
